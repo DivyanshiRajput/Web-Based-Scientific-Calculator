@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>infix calculator</title>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/CALC.css') }}">
+  </head>
+  <body
+    <div id="page">
+      <a href="{{ url_for('home')}}" style="" class="btn btn-info" role="button">go to home</a>
+    <div id="container">
+	  <div class= "title">
+	    <p> <b> INFIX CALCULATOR </b> </p>
+	  </div>
+      <div class="screen">
+        <form method="POST" action="" name="calculator">
+          <input type ="text" name="display"  id="scn" size="50" value="{{ans}}"  maxlength="50" autofocus autocomplete="off">
+          <!-- <input type="submit" value="=" class="button silver"> -->
+      </div>
+      <div class="btns">
+
+        <p>
+          <input type="button" value="RAD" class="button grey" onclick="calculator.display.value+='rad('">
+          <input type="button" value="DEG" class="button grey" onclick="calculator.display.value+='deg('">
+          <input type="button" value="x!"  class="button grey" onclick="calculator.display.value+='fact('">
+          <input type="button" value="%"   class="button grey" onclick="calculator.display.value+='%'">
+          <input type="button" value="("   class="button grey" onclick="calculator.display.value+='('">
+          <input type="button" value=")"   class="button grey" onclick="calculator.display.value+=')'">
+        </p>
+        <p>
+          <input type="button" value="cos" class="button grey" onclick="calculator.display.value+='cos('" onclick="autofocus" autocomplete="off" >
+          <input type="button" value="sin" class="button grey" onclick="calculator.display.value+='sin('">
+          <input type="button" value="tan" class="button grey" onclick="calculator.display.value+='tan('">
+          <input type="button" value="eª"  class="button grey" onclick="calculator.display.value+=Math.exp(calculator.display.value)" >
+          <input type="button" value="√"   class="button grey" onclick="calculator.display.value+='sqrt('">
+          <input type="button" value="xª"  class="button grey" onclick="calculator.display.value+='POW('">
+        </p>
+        <p>
+          <input type="button" value="cos⁻¹" class="button grey" onclick="calculator.display.value+='arccos('">
+          <input type="button" value="sin⁻¹" class="button grey" onclick="calculator.display.value+='arcsin('">
+          <input type="button" value="tan⁻¹" class="button grey" onclick="calculator.display.value+='arctan('">
+          <input type="button" value="log"   class="button grey" onclick="calculator.display.value+='log10('">
+          <input type="button" value="ln"    class="button grey" onclick="calculator.display.value+='ln('">
+          <input type="button" value="π"     class="button grey" onclick="calculator.display.value+= Math.PI " >
+        </p>  
+        <p>
+          <input type="button" value="7"    class="button silver" onclick="calculator.display.value+='7'">
+          <input type="button" value="8"    class="button silver" onclick="calculator.display.value+='8'">
+          <input type="button" value="9"    class="button silver" onclick="calculator.display.value+='9'">
+          <input type="button" value="AC"   class="button red"    onclick="calculator.display.value=''">
+          <input type="button" value="C"    class="button red"    onclick="calculator.display.value=calculator.display.value=calculator.display.value.substring(0,calculator.display.value.length-1)">
+        </p>
+        <p>
+          <input type="button" value="4" class="button silver" onclick="calculator.display.value+='4'">
+          <input type="button" value="5" class="button silver" onclick="calculator.display.value+='5'">
+          <input type="button" value="6" class="button silver" onclick="calculator.display.value+='6'">
+          <input type="button" value="×" class="button silver" onclick="calculator.display.value+= ' ' + '*' + ' '">
+          <input type="button" value="÷" class="button silver" onclick="calculator.display.value+= ' ' + '/' + ' '">
+        </p>
+        <p>
+          <input type="button" value="1" class="button silver" onclick="calculator.display.value+='1'">
+          <input type="button" value="2" class="button silver" onclick="calculator.display.value+='2'">
+          <input type="button" value="3" class="button silver" onclick="calculator.display.value+='3'">
+          <input type="button" value="+" class="button silver" onclick="calculator.display.value+=' ' + '+' + ' '">
+          <input type="button" value="-" class="button silver" onclick="calculator.display.value+= ' ' + '-' + ' '">
+        </p>
+        <p>
+          <input type="button" value="0" class="button silver" onclick="calculator.display.value+='0'">
+          <input type="button" value="." class="button silver" onclick="calculator.display.value+='.'">
+          <input type="button" value="," class="button silver" onclick="calculator.display.value+=','">
+        <button  type="submit" style= "position: absolute; right : 50px;  height:50px; width:150px"  formaction="{{ url_for('ans1') }}" name="button">=</button>
+      </form>
+        </p>
+      </div>
+
+
+    </div>
+    <script>
+  function getFocus() {
+    document.getElementById("scn").focus();
+  }
+  </script>
+  </body>
+</html>
