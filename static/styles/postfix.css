@@ -1,0 +1,68 @@
+#page{
+  position:relative;
+
+}
+#container{
+  background-color: rgba(91, 87, 4, 0.31);
+  height: 500px;
+  width: 320px;
+  border-radius: 8px;
+  position: relative;
+  top: 100px;
+  left: 40%
+}
+.screen{
+  background-color: #ffff99;
+  height: 60px;
+  width: 270px;
+
+  position: relative;
+  top: 20px;
+  left: 15px;
+
+
+}
+.screen input{
+  background-color: #e5dfa0;
+  height: 56px;
+  width: 266px;
+  position: relative;
+  top: 3px;
+  left: 2px;
+  color: black;
+  font-size: 25px;
+  text-align: right ;
+}
+
+.btns{
+  position: relative;
+  top: 30px;
+  left: 15px;
+
+}
+
+.button{
+  width: 40px;
+  height: 30px;
+  border-radius: 5px;
+  border: none;
+  margin-left: 10px;
+  cursor: pointer;
+}
+.button.black{
+  color: white;
+  background-color: black;
+  border-bottom: 2px solid #647489;
+    border-top: 2px black;
+}
+.button.red{
+  color: white;
+  background-color: red;
+  border-bottom: 2px solid #647489;
+
+}
+
+p{
+  line-height: 20px;
+
+}
